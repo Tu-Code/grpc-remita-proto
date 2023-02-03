@@ -1,9 +1,8 @@
 syntax = "proto3";
 
-// service RemitaService {
-//     rpc SetUpMandate(SetUpMandateRequest) returns (Response);
-
-// }
+service RemitaService {
+    rpc SetUpMandate(SetUpMandateRequest) returns (Response);
+}
 
 message SetUpMandateRequest {
   string merchantId = 1;
@@ -22,10 +21,10 @@ message SetUpMandateRequest {
   string maxNoOfDebits = 14;
 }
 
-// message Response {
-//     bool success = 1;
-//     string message = 2;
-//     string error = 3;
-//     uint32 status = 4;
-//     map<string, string> data = 5;
-// }
+message Response {
+    bool success = 1;
+    string message = 2;
+    string error = 3;
+    uint32 status = 4;
+    map<string, string> data = 5;
+}
