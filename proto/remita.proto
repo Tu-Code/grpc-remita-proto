@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+// service RemitaService {
+//     rpc SetUpMandate(SetUpMandateRequest) returns (Response);
+
+// }
+
+message SetUpMandateRequest {
+  string merchantId = 1;
+  string serviceTypeId = 2;
+  string hash = 3;
+  string payerName = 4;
+  string payerEmail = 5;
+  string payerPhone = 6;
+  string payerBankCode = 7;
+  string payerAccount = 8;
+  string requestId = 9;
+  string amount = 10;
+  string startDate = 11;
+  string endDate = 12;
+  string mandateType = 13;
+  string maxNoOfDebits = 14;
+}
+
+// message Response {
+//     bool success = 1;
+//     string message = 2;
+//     string error = 3;
+//     uint32 status = 4;
+//     map<string, string> data = 5;
+// }
